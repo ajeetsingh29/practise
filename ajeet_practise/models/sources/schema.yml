@@ -15,5 +15,12 @@ sources:
     schema: jaffle_shop 
     tables:
       - name: persons
+sources:
+  - name: Shop_Customers
+    description: 'This is a replica of the snowflake raw db'
+    database: raw
+    schema: jaffle_shop 
+    tables:
+      - name: customers      
 
       

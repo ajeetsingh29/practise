@@ -1,3 +1,3 @@
-select *
-from {{ ref('orders') }}
-where status ='completed'
+-- select *
+-- from {{ ref('my_first_dbt_model') }}
+-- where status ='completed'
