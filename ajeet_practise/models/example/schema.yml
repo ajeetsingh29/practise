@@ -2,14 +2,26 @@
 version: 2
 
 models:
-    # - name: my_first_dbt_model
-    #   description: "A starter dbt model"
-    #   columns:
-    #       - name: id
-    #         description: "The primary key for this table"
-    #         tests:
-    #             - unique
-    #             - not_null
+    - name: orders
+      description: "all the order for jaffle_shop"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+          - name: status
+            description: '{{ doc("order_status") }}'
+            tests:
+            - accepted_values:
+                values:
+                - completed
+                - shipped
+                - returned
+                - placed
+                - return_pending      
+ 
+     
 
     # - name: my_second_dbt_model
     #   description: "A starter dbt model"
@@ -19,7 +31,8 @@ models:
     #         tests:
     #             - unique
     #             - not_null
-    - name: orders
+    - name: customersorders
     - name: persons
-    - name: customers
+      
+
       
