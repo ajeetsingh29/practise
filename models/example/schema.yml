@@ -3,7 +3,7 @@ version: 2
 
 models:
     - name: orders
-      description: "all the order for jaffle_shop"
+      description: "all the order for jaffle_shop that are...."
       columns:
           - name: id
             description: "The primary key for this table"
